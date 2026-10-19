@@ -1,0 +1,18 @@
+DevTools:
+
+URL: http://127.0.0.1:5500/paginas/index.html
+protocolo: http
+host:127.0.0.1
+puerto: 5500
+ruta:/paginas/index.html
+método de petición:GET
+código de estado: 200 OK
+
+URL: http://127.0.0.1:5500/paginas/promociones.html
+código de estado: 404 Not Found
+este código significa que no se encontró la ruta que se está buscando con esa dirección.
+
+Roles
+HTML: es el esqueleto de la página, será útil para darle estructura y organizar todos los elementos de esta en cuanto a distribución y contenido, ejemplo: si quiero poner un párrafo y luego una lista de contenido.
+CSS: se encarga del diseño de la página, sirve para definir el aspecto visual y la presentación de todos los elementos y contenido que habita en ella, ejemplo: el tamaño y ubicación de una imagen.
+JavaScript: Se encarga de las funcionalidades, es el lenguaje que le da interactividad a la página, ejemplo: los botones o la intercomunicación entre pestañas.
