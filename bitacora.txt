@@ -17,10 +17,55 @@ HTML: es el esqueleto de la página, será útil para darle estructura y organiz
 CSS: se encarga del diseño de la página, sirve para definir el aspecto visual y la presentación de todos los elementos y contenido que habita en ella, ejemplo: el tamaño y ubicación de una imagen.
 JavaScript: Se encarga de las funcionalidades, es el lenguaje que le da interactividad a la página, ejemplo: los botones o la intercomunicación entre pestañas.
 
+
+Punto 6, reto 4:
+
 |       origen        |              Destino             |         Ruta escrita     | 
-/paginas/index.html           /paginas/tarifas.html          /paginas/tarifas.html           
-/paginas/index.html           /paginas/reservas.html         /paginas/reservas.html
-/paginas/tarifas.html         /paginas/index.html            /paginas/index.html
+        /index.html           /paginas/tarifas.html          /paginas/tarifas.html           
+        /index.html           /paginas/reservas.html         /paginas/reservas.html
+/paginas/tarifas.html         /index.html                    /index.html
 /paginas/tarifas.html         /paginas/reservas.html         /paginas/reservas.html
-/paginas/reservas.html        /paginas/index.html            /paginas/index.html
+/paginas/reservas.html        /index.html                    /index.html
 /paginas/reservas.html        /paginas/tarifas.html          /paginas/tarifas.html
+
+Esquema de regiones:
+
+index.html:
+<body>
+<header>
+<nav></nav>
+</header>
+<main>
+<section></section>
+<article></article>
+<article></article>
+<article></article>
+<section></section>
+<section></section>
+</main>
+<aside></aside>
+<footer></footer>
+</body>
+
+reservas:
+<body>
+<header>
+<nav></nav>
+</header>
+<main>
+<section></section>
+</main>
+<footer></footer>
+</body>
+
+tarifas:
+<body>
+<header>
+<nav></nav>
+</header>
+<main>
+<section></section>
+<article></article>
+</main>
+<footer></footer>
+</body>
