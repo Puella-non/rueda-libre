@@ -53,7 +53,7 @@ reservas:
 <nav></nav>
 </header>
 <main>
-<section></section>
+<aside></aside>
 </main>
 <footer></footer>
 </body>
@@ -65,7 +65,8 @@ tarifas:
 </header>
 <main>
 <section></section>
-<article></article>
+<section></section>
+<aside></aside>
 </main>
 <footer></footer>
 </body>
