@@ -116,3 +116,43 @@ Resultado obtenido: El navegador muestra un error de rango.
 Dato: Casilla sin marcar. 
 Resultado esperado: Impedir el envío del formulario. 
 Resultado obtenido: El navegador solicita aceptar las políticas.
+
+Hallazgos de accesibilidad:
+1. Imágen: Una imagen decorativa no tenía alt descriptivo.
+Añadí un alt sin descripción debido a que no es relevante.
+2. Imágen: Una imagen decorativa tenía alt descriptivo.
+Borré la descripción debido a que no es relevante.
+3. Enlace: Un enlace decía «Haz clic aquí».
+Cambié el texto a uno que explica mejor su destino.
+4. Idioma: El documento reservas.html tenía el idioma en inglés.
+Cambié lang="es" al elemento <html>.
+5. Imágen: La imagen de recorridos (informativa) no tenía alt descriptivo.
+Añadí un alt que describe su contenido.
+
+
+Evaluación de combinaciones con WebAIM Contrast Checker:
+
+Combinación de colores	                  Contraste	Clasificación
+Blanco sobre Verde Ruta (#1E7A4F)	  5,31:1	Apta para texto normal
+Blanco sobre Naranja Pedal (#F39A2B)	  2,22:1	No apta
+Azul Noche (#14213D) sobre Naranja Pedal  7,20:1	Apta para texto normal
+Azul Noche sobre Crema (#FAF6EF)	  14,83:1	Apta para texto normal
+Gris Asfalto (#5B6470) sobre Crema	  5,57:1	Apta para texto normal
+Verde Ruta sobre Crema	                  4,93:1	Apta para texto normal
+Naranja Pedal sobre Crema	          2,06:1	No apta
+Blanco sobre Azul Noche	                  15,97:1	Apta para texto normal
+
+
+Mapa de uso de color:
+Color	         Código HEX	    Uso recomendado
+Verde Ruta	#1E7A4F	Botones principales y enlaces con texto blanco (5,31:1).
+Naranja Pedal	#F39A2B	Destacados y botones secundarios con texto Azul Noche (7,20:1).
+Azul Noche	#14213D	Títulos y texto principal sobre fondo Crema (14,83:1).
+Crema	        #FAF6EF	Fondo general del sitio.
+Gris Asfalto	#5B6470	Texto secundario sobre Crema (5,57:1).
+
+Combinaciones no aptas: 
+blanco sobre Naranja Pedal (2,22:1) y Naranja Pedal sobre Crema (2,06:1).
+
+Conclusión: Se utilizará Crema para fondos, Azul Noche y Gris Asfalto para textos, Verde Ruta para botones principales y enlaces, y Naranja Pedal para destacados con texto Azul Noche. 
+Las combinaciones recomendadas cumplen el contraste WCAG AA de 4,5:1 para texto normal.
