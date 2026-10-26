@@ -70,3 +70,8 @@ tarifas:
 </main>
 <footer></footer>
 </body>
+
+Formulario: 
+1. Se eligió el control textarea para el comentario ya que la persona debe de tener el espacio para escribir sus aclaraciones o exigencias.
+2. Se eligió el control lista desplegable para el tipo de bicileta ya que es más fácil que el cliente solo de click en una de las tres opciones disponibles.
+3. Se eligió el control checkbox para la aceptación de las políticas de alquiler ya que es la ruta más fácil para que el cliente de su consentimiento sin tener que realizar pasos demás.
