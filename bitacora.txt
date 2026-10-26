@@ -156,3 +156,5 @@ blanco sobre Naranja Pedal (2,22:1) y Naranja Pedal sobre Crema (2,06:1).
 
 Conclusión: Se utilizará Crema para fondos, Azul Noche y Gris Asfalto para textos, Verde Ruta para botones principales y enlaces, y Naranja Pedal para destacados con texto Azul Noche. 
 Las combinaciones recomendadas cumplen el contraste WCAG AA de 4,5:1 para texto normal.
+
+Enlace GitHub Pages: https://puella-non.github.io/rueda-libre/
