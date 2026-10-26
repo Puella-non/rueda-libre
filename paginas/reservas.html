@@ -32,22 +32,22 @@
                 </p>
                  <p>
                     <label for="cedula">Número de documento</label>
-                    <input type="number" id="cedula" name="cedula" required min="8" max="10">
+                    <input type="number" id="cedula" name="cedula" required pattern="[0-9]{6,10}" title="Escribe entre 6 y 10 números, sin espacios">
                  </p>
                 <p>
                     <label for="correo">Correo electrónico</label>
-                    <input type="email" id="correo" name="correo" required minlength="5">
+                    <input type="email" id="correo" name="correo" required>
                  </p>
                  <p>
                     <label for="cel">Celular</label>
-                    <input type="tel" id="cel" name="cel" required min="10 "max="10">
+                    <input type="tel" id="cel" name="cel" required pattern="3[0-9]{9}" title="Escribe 10 dígitos, debe de empezar por 3">
                 </p>
             </fieldset>
             <fieldset>
                 <legend>Tu alquiler</legend>
                 <p>
                     <label for="fecha">Fecha del alquiler</label>
-                    <input type="date" id="fecha" name="fecha" required>
+                    <input type="date" id="fecha" name="fecha" required min="2026-11-01" max="2026-12-31">
                 </p>
                 <p>
                     <label for="tipo">Tipo de bicicleta</label>
@@ -73,7 +73,7 @@
                 </p>
                 <p>
                     <label for="cantidad">Cantidad de bicicletas</label>
-                    <input type="number" id="cantidad" name="cantidad" required>
+                    <input type="number" id="cantidad" name="cantidad" required min="1" max="6">
                 </p>
                 <p>
                     <label for="recorrido">Recorrido guiado</label>
@@ -86,7 +86,7 @@
                 </p>
                 <p>
                     <label for="coment">comentarios</label>
-                    <textarea name="coment" id="coment" rows="2" minlength="10" required></textarea>
+                    <textarea name="coment" id="coment" rows="2" maxlength="300"></textarea>
                 </p>
             </fieldset>
             <fieldset>

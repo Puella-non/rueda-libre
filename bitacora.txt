@@ -75,3 +75,44 @@ Formulario:
 1. Se eligió el control textarea para el comentario ya que la persona debe de tener el espacio para escribir sus aclaraciones o exigencias.
 2. Se eligió el control lista desplegable para el tipo de bicileta ya que es más fácil que el cliente solo de click en una de las tres opciones disponibles.
 3. Se eligió el control checkbox para la aceptación de las políticas de alquiler ya que es la ruta más fácil para que el cliente de su consentimiento sin tener que realizar pasos demás.
+
+Tabla de pruebas:
+1. Nombre: 
+Dato: Al. 
+Resultado esperado: Rechazar por tener menos de 3 caracteres. 
+Resultado obtenido: No permite enviar el formulario.
+
+2. Documento: 
+Dato: 123456789012. 
+Resultado esperado: Rechazar por superar 10 dígitos. 
+Resultado obtenido: Permite ingresarlo debido a un error en la validación actual.
+
+3. Correo: 
+Dato: laura@correo. 
+Resultado esperado: Rechazar por formato inválido. 
+Resultado obtenido: El navegador solicita corregir el correo.
+
+4. Celular: 
+Dato: 2156789012. 
+Resultado esperado: Rechazar porque no empieza por 3. 
+Resultado obtenido: El navegador rechaza el número por incumplir el patrón.
+
+5. Fecha: 
+Dato: 05/01/2027. 
+Resultado esperado: Rechazar por superar la fecha máxima. 
+Resultado obtenido: El navegador bloquea el envío.
+
+6. Tipo de plan: 
+Dato: Sin seleccionar. 
+Resultado esperado: Solicitar que se seleccione un plan. 
+Resultado obtenido: El navegador solicita seleccionar una opción.
+
+7. Cantidad de bicicletas: 
+Dato: 7. 
+Resultado esperado: Rechazar por superar el máximo de 6. 
+Resultado obtenido: El navegador muestra un error de rango.
+
+8. Políticas: 
+Dato: Casilla sin marcar. 
+Resultado esperado: Impedir el envío del formulario. 
+Resultado obtenido: El navegador solicita aceptar las políticas.
