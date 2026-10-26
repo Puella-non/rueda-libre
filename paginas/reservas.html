@@ -57,15 +57,21 @@
                         <option value="eléctrica">eléctrica</option>
                     </select>
                 </p>
+                
+                <p>Tipo de plan:</p>
                 <p>
-                    <label for="tipoP">Tipo plan</label>
-                    <select name="tipoP" id="tipoP" required>
-                        <option value="1">1 hora</option>
-                        <option value="2">medio día</option>
-                        <option value="3">día completo</option>
-                    </select>
+                    <label for="plan1">1 hora</label>
+                    <input type="radio" name="tipoP" id="plan1" value="1" required>
                 </p>
-                  <p>
+                <p>
+                    <label for="plan2">Medio día</label>
+                    <input type="radio" name="tipoP" id="plan2" value="2">
+                </p>
+                <p>
+                    <label for="plan3">Día completo</label>
+                    <input type="radio" name="tipoP" id="plan3" value="3">
+                </p>
+                <p>
                     <label for="cantidad">Cantidad de bicicletas</label>
                     <input type="number" id="cantidad" name="cantidad" required>
                 </p>
@@ -87,7 +93,7 @@
                 <legend>Confirmación</legend>
                 <p>
                     <label for="politicas">acepto las políticas de alquiler</label>
-                    <input type="checkbox" id="politicas +" name="politicas" required>
+                    <input type="checkbox" id="politicas" name="politicas" required>
                 </p>
             </fieldset>
             <p>
