@@ -165,3 +165,13 @@ Se inspeccionó un párrafo <p> de la página de Rueda Libre mediante las pesta�
 
 1. Propiedad heredada: font-family, cuyo valor es "Open Sans", Arial, sans-serif. Esta fuente proviene de la regla definida en body.
 2. Propiedad no heredada: margin-block-start, con un valor calculado de 16px. Esta propiedad representa el margen superior del párrafo y no se hereda automáticamente desde body.
+
+
+Análisis de especificidad CSS en Rueda Libre
+
+#menu a: especificidad (1, 0, 1). Define el color gris para los enlaces dentro del menú.
+.activo: especificidad (0, 1, 0). Define el color verde y el grosor de fuente del enlace activo.
+
+Causa del problema: El selector #menu a tiene mayor especificidad que .activo, por esta razón, el color gris prevalece sobre el verde.
+
+
