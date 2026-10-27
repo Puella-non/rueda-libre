@@ -29,37 +29,6 @@ body {
 /*Sector agrupado de encabezados*/
 h1, h2, h3, h4 {
     font-family: var(--fuente-titulo);
-}/*Declarar variables globales*/
-:root {
-    /* Colores */
-    --fondo-general: #FAF6EF;
-    --botones-y-enlaces: #1E7A4F;
-    --destacados-y-botones-secundarios: #F39A2B;
-    --títulos-y-texto-principal: #14213D;
-    --texto-secundario: #5B6470;
-
-    /* Tipografías */
-    --fuente-titulo: "Montserrat", Arial, sans-serif;
-    --fuente-texto: "Open Sans", Arial, sans-serif;
-
-    /* escala de espaciados */
-    --espacio-s: 0.5rem;
-    --espacio-m: 1rem;
-    --espacio-l: 2rem;
-    --espacio-xl: 3rem;
-}
-
-body {
-
-    font-family: var(--fuente-texto);
-    color: var(--títulos-y-texto-principal);
-    background-color: var(--fondo-general);
-
-}
-
-/*Sector agrupado de encabezados*/
-h1, h2, h3, h4 {
-    font-family: var(--fuente-titulo);
 }
 
 #menu a { 
