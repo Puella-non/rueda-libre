@@ -158,3 +158,10 @@ Conclusión: Se utilizará Crema para fondos, Azul Noche y Gris Asfalto para tex
 Las combinaciones recomendadas cumplen el contraste WCAG AA de 4,5:1 para texto normal.
 
 Enlace GitHub Pages: https://puella-non.github.io/rueda-libre/
+
+
+Comprobación de herencia CSS con DevTools
+Se inspeccionó un párrafo <p> de la página de Rueda Libre mediante las pestañas Styles y Computed de DevTools.
+
+1. Propiedad heredada: font-family, cuyo valor es "Open Sans", Arial, sans-serif. Esta fuente proviene de la regla definida en body.
+2. Propiedad no heredada: margin-block-start, con un valor calculado de 16px. Esta propiedad representa el margen superior del párrafo y no se hereda automáticamente desde body.
