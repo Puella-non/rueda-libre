@@ -175,3 +175,13 @@ Análisis de especificidad CSS en Rueda Libre
 Causa del problema: El selector #menu a tiene mayor especificidad que .activo, por esta razón, el color gris prevalece sobre el verde.
 
 
+Medición en DevTools (Computed):
+Antes del border-box: 
+width: 294.514px
+Después del border-box: 
+widht: 328.292px
+
+Se observó una variación en el ancho de la tarjeta al cambiar la propiedad box-sizing. Con border-box, el relleno y los bordes se incluyen dentro del ancho definido y con content-box, se suman al ancho del contenido.
+
+
+

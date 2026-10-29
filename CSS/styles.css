@@ -18,6 +18,25 @@
     --espacio-xl: 3rem;
 }
 
+/* El padding y el borde se incluyen dentro del ancho de cada elemento */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Limitar y centrar el contenido principal */
+main {
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: var(--espacio-m);
+}
+
+/* Portada de inicio */
+.portada {
+    min-height: 40vh;
+}
+
 body {
 
     font-family: var(--fuente-texto);
@@ -27,37 +46,45 @@ body {
 }
 
 /*Sector agrupado de encabezados*/
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: var(--fuente-titulo);
 }
 
-#menu a { 
-    color: var(--texto-secundario); 
-    padding: var(--espacio-s);
-    border-radius: 4px;}
+#menu {
+    a {
+        color: var(--texto-secundario);
+        padding: var(--espacio-s);
+        border-radius: 4px;
+        display: flex;
 
-/* Al pasar el cursor */
-#menu a:hover {
-    color: #FFFFFF;
-    background-color: var(--títulos-y-texto-principal);
-}
+        /* Al pasar el cursor */
+        &:hover {
+            color: #FFFFFF;
+            background-color: var(--títulos-y-texto-principal);
+        }
 
-/* Al navegar con el teclado */
-#menu a:focus-visible {
-    outline: 3px solid var(--botones-y-enlaces);
-    outline-offset: 3px;
-    background-color: var(--títulos-y-texto-principal);
-    color: #FFFFFF;
-}
+        /* Al navegar con el teclado */
+        &:focus-visible {
+            outline: 3px solid var(--botones-y-enlaces);
+            outline-offset: 3px;
+            background-color: var(--títulos-y-texto-principal);
+            color: #FFFFFF;
+        }
 
-#menu a.activo {
-    color: #FFFFFF;
-    background-color: var(--botones-y-enlaces);
-    font-weight: 600;
+        &.activo {
+            color: #FFFFFF;
+            background-color: var(--botones-y-enlaces);
+            font-weight: 600;
+        }
+    }
 }
 
 /* Botón de llamada a la acción */
 .boton-A {
+
     display: inline-block;
     padding: var(--espacio-m);
     background-color: var(--botones-y-enlaces);
@@ -65,17 +92,16 @@ h1, h2, h3, h4 {
     text-decoration: none;
     font-weight: 600;
     border-radius: 4px;
-}
 
-.boton-A:hover {
-    background-color: var(--títulos-y-texto-principal);
-    color: #FFFFFF;
-    text-decoration: underline;
-}
+    &:hover {
+        background-color: var(--títulos-y-texto-principal);
+        text-decoration: underline;
+    }
 
-.boton-A:focus-visible {
-    outline: 3px solid var(--títulos-y-texto-principal);
-    outline-offset: 3px;
+    &:focus-visible {
+        outline: 3px solid var(--títulos-y-texto-principal);
+        outline-offset: 3px;
+    }
 }
 
 /* Indicador de foco para campos del formulario */
@@ -85,3 +111,72 @@ textarea:focus-visible {
     outline: 3px solid var(--títulos-y-texto-principal);
     outline-offset: 3px;
 }
+
+/* Contenedor de los servicios */
+.servicios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espacio-m);
+}
+
+/* Tarjetas individuales */
+.servicio {
+    box-sizing: border-box;
+    flex: 1 1 18rem;
+    padding: var(--espacio-m);
+    border: 1px solid var(--texto-secundario);
+    border-radius: 8px;
+
+    /* Imágenes de las tarjetas */
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+
+    }
+}
+
+/* Mejora de lectura de tablas*/
+table 
+{
+    border-collapse: collapse;
+    border: 2px solid var(--texto-secundario);
+}
+
+th, td {
+        padding: 1rem;
+        border: 1px solid var(--texto-secundario);
+}
+
+th {
+    color: white;
+    background-color: var(--títulos-y-texto-principal);
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+fieldset {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+}
+
+.boton-form {
+    padding: 1rem 2rem;
+    background-color: var(--botones-y-enlaces);
+    color: white;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+
+
