@@ -1,3 +1,4 @@
+
 /*Declarar variables globales*/
 :root {
     /* Colores */
@@ -25,6 +26,15 @@
     box-sizing: border-box;
 }
 
+/* Estilos generales de la página */
+body {
+    
+    font-family: var(--fuente-texto);
+    color: var(--títulos-y-texto-principal);
+    background-color: var(--fondo-general);
+
+}
+
 /* Limitar y centrar el contenido principal */
 main {
     max-width: 70rem;
@@ -37,15 +47,8 @@ main {
     min-height: 40vh;
 }
 
-body {
+/*Sector agrupado de encabezados con si tipografía*/
 
-    font-family: var(--fuente-texto);
-    color: var(--títulos-y-texto-principal);
-    background-color: var(--fondo-general);
-
-}
-
-/*Sector agrupado de encabezados*/
 h1,
 h2,
 h3,
@@ -53,6 +56,7 @@ h4 {
     font-family: var(--fuente-titulo);
 }
 
+/* Enlaces del menú */
 #menu {
     a {
         color: var(--texto-secundario);
@@ -74,6 +78,7 @@ h4 {
             color: #FFFFFF;
         }
 
+        /* Página actual */
         &.activo {
             color: #FFFFFF;
             background-color: var(--botones-y-enlaces);
@@ -93,11 +98,13 @@ h4 {
     font-weight: 600;
     border-radius: 4px;
 
+    /* Efecto al pasar el cursor */
     &:hover {
         background-color: var(--títulos-y-texto-principal);
         text-decoration: underline;
     }
 
+    /* Indicador de foco para botones y campos */
     &:focus-visible {
         outline: 3px solid var(--títulos-y-texto-principal);
         outline-offset: 3px;
@@ -121,6 +128,7 @@ textarea:focus-visible {
 
 /* Tarjetas individuales */
 .servicio {
+    position: relative;
     box-sizing: border-box;
     flex: 1 1 18rem;
     padding: var(--espacio-m);
@@ -132,7 +140,19 @@ textarea:focus-visible {
         width: 100%;
         height: auto;
         display: block;
+    }
 
+    /* Etiqueta de novedad */
+    .etiqueta-nuevo {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: var(--destacados-y-botones-secundarios);
+        color: var(--títulos-y-texto-principal);
+        padding: 0.3rem 0.6rem;
+        border-radius: 8px;
+        font-size: 0.8rem;
+        font-weight: bold;
     }
 }
 
@@ -153,23 +173,34 @@ th {
     background-color: var(--títulos-y-texto-principal);
 }
 
+/* formulario */
+
+/* Etiquetas de los campos */
 label {
     display: block;
     margin-bottom: 0.5rem;
 }
 
-input,
+/* Campos de entrada */
+input:not([type="radio"]):not([type="checkbox"]),
 select,
 textarea {
     width: 100%;
     box-sizing: border-box;
 }
 
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+}
+
+/* Agrupación de campos */
 fieldset {
     margin-bottom: 1.5rem;
     padding: 1rem;
 }
 
+/* Botón del formulario */
 .boton-form {
     padding: 1rem 2rem;
     background-color: var(--botones-y-enlaces);
@@ -178,5 +209,17 @@ fieldset {
     cursor: pointer;
 }
 
+/* Enlace flotante de WhatsApp */
+.whatsapp-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+}
 
 
