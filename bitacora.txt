@@ -1,3 +1,5 @@
+SEMANA 1 ------------------------------------------------------------------------------------------------------------------------------------------
+
 DevTools:
 
 URL: http://127.0.0.1:5500/paginas/index.html
@@ -183,5 +185,17 @@ widht: 328.292px
 
 Se observó una variación en el ancho de la tarjeta al cambiar la propiedad box-sizing. Con border-box, el relleno y los bordes se incluyen dentro del ancho definido y con content-box, se suman al ancho del contenido.
 
+Resumen:
+En la semana 1 se construyó la página rueda-libre empezando por la estructura HTML y creando el repositorio en GitHub para ir sibuendo los avances. (día 1)
+Luego se revisó y adaptó la página con una estructura HTML semántica, se realizó el formulario de contacto y se enlazaron las tres páginas, después se realizó la primera publicación en GitHub Pages. (día 2)
+Finalmente se creó el archivo CSS para darle estilo a las tres páginas. (día 3)
 
 
+SEMANA 2 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Comportamiento responsive:
+
+encabezado:
+Cuando la página se estrecha poco a poco y la lista del menú ya no cabe en la pantalla, cada ítem del menú pasa a la siguiente linea ya que el contenedor utiliza flex-wrap:wrap para darle ese diseño responsive, el menú y el título de la página no se combinan uno encima del otro, y si se sigue estrechando, se inicia un scroll horizontal en el navegador.
+
+pie de página:
+Cuando la página se estrecha lo suficiente los ítem del footer no se anteponen uno encima del otro, mantienen un mínimo de distancia y si se sigue estrechado se inicia un scroll horizontal en el navegador.

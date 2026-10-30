@@ -26,6 +26,19 @@
     box-sizing: border-box;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    
+}
+
 /* Estilos generales de la página */
 body {
     
@@ -58,12 +71,15 @@ h4 {
 
 /* Enlaces del menú */
 #menu {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    
     a {
         color: var(--texto-secundario);
         padding: var(--espacio-s);
         border-radius: 4px;
-        display: flex;
-
+    
         /* Al pasar el cursor */
         &:hover {
             color: #FFFFFF;
