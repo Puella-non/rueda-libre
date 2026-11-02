@@ -199,3 +199,13 @@ Cuando la página se estrecha poco a poco y la lista del menú ya no cabe en la 
 
 pie de página:
 Cuando la página se estrecha lo suficiente los ítem del footer no se anteponen uno encima del otro, mantienen un mínimo de distancia y si se sigue estrechado se inicia un scroll horizontal en el navegador.
+
+
+DevTools:
+Ancho:     # columnas
+1280px         4
+900px          3
+500px          1
+
+Conclusión: la cantidad de columnas cambia según el ancho disponible,
+sin media queries, gracias a: repeat(auto-fit, minmax(250px, 1fr)).
