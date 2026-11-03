@@ -221,3 +221,39 @@ Encabezado: Usé Flexbox debido a que era necesario acomodar el título a la izq
 Pie: Usé Flexbox debido a que solo debía de alinear horizontalmente tres textos cortos en una fila, es un flujo lineal, sin proporciones entre columnas.
 
 Conclusión: Grid para la estructura general de cada página y Flexbox para alinear el contenido interno de un componente.
+
+
+Pruebas con modo dispositivo (360 px, 768 px y 1280 px)
+
+| Ancho |                          Qué se verificó                                       | Resultado |
+| 360 px | Una columna, encabezado centrado, tablas sin scroll lateral           | Correcto tras los ajustes |
+| 768 px | Encabezado en fila, portada en 2 columnas, servicios en 2, galería en 3       | Correcto |
+| 1280 px | Servicios en 3 columnas, reservas 2:1, portada 3fr 2fr                       | Correcto |
+
+Problemas encontrados y cómo los resolví:
+
+1. La portada no se ponía en dos columnas.
+   Causa: escribí grid-template-columns: 1fr, 1fr; con coma, y DevTools
+   mostraba la línea tachada con una advertencia. Solución: separar los
+   valores con espacio (1fr 1fr).
+
+2. El horario de atención quedaba debajo del formulario en reservas.
+   Causa: el <aside> estaba fuera del contenedor Grid. Solución: poner
+   <section> y <aside> dentro del mismo <div class="reservas-layout">.
+
+3. La tabla de recorridos hacía scroll horizontal a 360 px.
+   Causa: tiene 5 columnas y el relleno y la letra eran demasiado grandes.
+   Solución: envolver las tablas en .tabla-scroll (overflow-x: auto),
+   reducir font-size y padding en móvil, y volver a los valores normales
+   desde 768 px.
+
+4. El encabezado se veía igual en móvil y en escritorio.
+   Causa: la regla global header { justify-content: space-between } era de
+   escritorio y afectaba a todos los <header>. Solución: usar
+   body > header con flex-direction: column en la base y volver a row
+   en el media query de 768 px.
+
+5. La última tarjeta de servicios quedaba sola a 1200 px.
+   Causa: 4 tarjetas en 3 columnas dejan una huérfana. Solución:
+   .servicio:last-child {grid-column: span 3;} dentro del media query
+   de 1200 px.

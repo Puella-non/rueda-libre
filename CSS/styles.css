@@ -28,24 +28,31 @@
 
 header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
 footer {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 1rem;
+    flex-direction: column;
+    gap: var(--espacio-s);
+    padding: var(--espacio-m);
 }
 
 /* Estilos generales de la página */
-body {
-    
+body {  
+    margin: 0; /*Práctica común en mobile-first*/
     font-family: var(--fuente-texto);
     color: var(--títulos-y-texto-principal);
     background-color: var(--fondo-general);
 
+    > header {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* centra título y menú horizontalmente */
+        text-align: center;
+        gap: var(--espacio-s);
+        padding: var(--espacio-m);
+    }
 }
 
 /* Limitar y centrar el contenido principal */
@@ -58,25 +65,23 @@ main {
 /* Portada de inicio */
 .portada {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center; /* centra verticalmente el bloque de texto*/
-    gap: var(--espacio-l);
-    min-height: 40vh;  
+    grid-template-columns: 1fr;
+    align-items: center; 
+    gap: var(--espacio-l);  
 
     .portada-texto header {
-    justify-content: flex-start;
-    gap: var(--espacio-m);
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--espacio-m);
     }
 
     .portada-foto {
             width: 100%;
-            height: auto;
             border-radius: 12px;
     }
 }
 
 /*Sector agrupado de encabezados con si tipografía*/
-
 h1,
 h2,
 h3,
@@ -84,11 +89,19 @@ h4 {
     font-family: var(--fuente-titulo);
 }
 
+/* Las imágenes nunca se salen de su contenedor */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* Enlaces del menú */
 #menu {
     display: flex;
-    gap: 1rem;
+    gap: var(--espacio-s);
     flex-wrap: wrap;
+    justify-content: center; /* centra los enlaces dentro del menú */
+
     
     a {
         color: var(--texto-secundario);
@@ -152,16 +165,14 @@ textarea:focus-visible {
 
 /* Contenedor de los servicios */
 .servicios {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: var(--espacio-m);
 }
 
 /* Tarjetas individuales */
 .servicio {
     position: relative;
-    box-sizing: border-box;
-    flex: 1 1 18rem;
     padding: var(--espacio-m);
     border: 1px solid var(--texto-secundario);
     border-radius: 8px;
@@ -190,13 +201,29 @@ textarea:focus-visible {
 /* Mejora de lectura de tablas*/
 table 
 {
+    width: 100%;
     border-collapse: collapse;
     border: 2px solid var(--texto-secundario);
+    font-size: 0.75rem;
+
+}
+
+.tabla-scroll {
+    overflow-x: auto;
+    margin-bottom: var(--espacio-l);
+}
+
+caption {
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding-bottom: var(--espacio-s);
 }
 
 th, td {
-        padding: 1rem;
+        
         border: 1px solid var(--texto-secundario);
+        padding: 0.3rem 0.25rem;
+        text-align: left;
 }
 
 th {
@@ -209,7 +236,7 @@ th {
 /* Etiquetas de los campos */
 label {
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--espacio-s);
 }
 
 /* Campos de entrada */
@@ -217,7 +244,6 @@ input:not([type="radio"]):not([type="checkbox"]),
 select,
 textarea {
     width: 100%;
-    box-sizing: border-box;
 }
 
 input[type="radio"],
@@ -227,8 +253,8 @@ input[type="checkbox"] {
 
 /* Agrupación de campos */
 fieldset {
-    margin-bottom: 1.5rem;
-    padding: 1rem;
+    margin-bottom: var(--espacio-l);
+    padding: var(--espacio-m);
 }
 
 /* Botón del formulario */
@@ -243,11 +269,11 @@ fieldset {
 /* Enlace flotante de WhatsApp */
 .whatsapp-flotante {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 16px;
+    right: 16px;
     background-color: #25D366;
     color: white;
-    padding: 1rem 1.5rem;
+    padding: 0.75rem 1.25rem;
     border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
@@ -257,15 +283,15 @@ fieldset {
 /*Sección Nuestra Flota*/
 .nuestra-flota1 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
+    /* min(250px, 100%) evita desbordar en pantallas de menos de 250px */
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+    gap: var(--espacio-m);
 
     article {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        box-sizing: border-box;
-        gap: 0.5rem;
+        gap: var(--espacio-s);
         padding: var(--espacio-m);
         border: 1px solid var(--texto-secundario);
         border-radius: 8px;
@@ -284,7 +310,7 @@ fieldset {
 
 .galeria {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     gap: var(--espacio-m);
 
     article {
@@ -304,8 +330,7 @@ fieldset {
 
 .reservas-layout {
     display: grid;
-    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
-    align-items: start;
+    grid-template-columns: 1fr;
     gap: var(--espacio-l);
 }
 
@@ -314,14 +339,94 @@ dd {
 }
 
 /* Dos campos cortos en la misma fila */
-
 .fila-campos {
     display: flex;
-    gap: var(--espacio-m);
-    flex-wrap: wrap;
-    
-    p {
-        flex: 1 1 12rem;
-        min-width: 0;
+    flex-direction: column;
+}
+
+/*TABLET (768px o más)*/
+@media (min-width: 768px) {
+
+    /* Encabezado: título a la izquierda, menú a la derecha */
+    body > header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .servicios {
+    grid-template-columns: repeat(2, 1fr);
+    }   
+
+    /* Pie: textos en una fila */
+    footer {
+        flex-direction: row;
+        gap: var(--espacio-m);
+    }
+
+    /* Portada: texto y foto en dos columnas */
+    .portada {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;   /* centra verticalmente el bloque de texto */
+    }
+
+    /* Galería: tres rutas en una fila */
+    .galeria {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Documento y celular en la misma fila */
+    .fila-campos {
+        flex-direction: row;
+        gap: var(--espacio-m);
+
+        p {
+            flex: 1;
+            min-width: 0;
+        }
+    }
+
+    table {
+        font-size: 1rem;
+    }
+
+    caption {
+        font-size: 1.1rem;
+    }
+
+    th,
+    td {
+        padding: var(--espacio-s) var(--espacio-m);
     }
 }
+
+/*ESCRITORIO (1200px o más)*/
+@media (min-width: 1200px) {
+
+    /* Pie: textos separados a lo ancho */
+    footer {
+        justify-content: space-around;
+        text-align: center;
+    }
+
+    /* Portada: más peso al texto */
+    .portada {
+        grid-template-columns: 3fr 2fr;
+        gap: var(--espacio-xl);
+    }
+
+    .servicios {
+    grid-template-columns: repeat(3, 1fr);
+
+        .servicio:last-child {
+            grid-column: span 3;
+        }
+    }
+
+    /* Reservas: formulario 2/3 y horario 1/3 */
+    .reservas-layout {
+        grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+        align-items: start;
+    }
+}
+
