@@ -257,3 +257,34 @@ Problemas encontrados y cómo los resolví:
    Causa: 4 tarjetas en 3 columnas dejan una huérfana. Solución:
    .servicio:last-child {grid-column: span 3;} dentro del media query
    de 1200 px.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Comparación: CSS Grid propio vs. grilla de Bootstrap (Nuestra flota)
+
+Tiempo invertido:
+Reconstruir la flota solo con la grilla de Bootstrap: 19:03 min.
+
+Líneas de CSS de distribución vs. clases usadas:
+
+|                          | Versión propia (CSS Grid)                           | Versión Bootstrap                            
+|--------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
+| Distribución de columnas | 3 líneas en .nuestra-flota1 (display: grid, grid-template-columns: repeat(auto-fit, minmax(...)), gap) | 0 líneas de CSS                                                               |
+| Clases en HTML           | 1 clase (nuestra-flota1)                            | 31 clases (container (1) + row g-3 (2) + col-12 col-sm-6 col-lg-4 col-xl-3 en cada una de las 7 tarjetas (28 clases de columna)) |
+| Puntos de quiebre        | 0 media queries (lo resuelve auto-fit)              | 3 (576, 992 y 1200 px) más la base                                                                                               |
+
+¿Qué me dio Bootstrap sin esfuerzo?
+- Una grilla responsive de 12 columnas ya probada, sin escribir CSS.
+- Puntos de quiebre estándar (sm, lg, xl) con nombres claros.
+- Gutters uniformes con una sola clase (g-3).
+- Un contenedor (container) con anchos máximos por pantalla.
+
+¿Qué control perdí?
+- El número de columnas lo fijan los puntos de quiebre de Bootstrap (576, 992, 1200 px), no el espacio real disponible. Con auto-fit y minmax las columnas se ajustaban a cualquier ancho.
+- El HTML se llenó de clases (col-12 col-sm-6 col-lg-4 col-xl-3 repetido 7 veces) y apareció un <div> extra por tarjeta.
+- Dependo de un archivo externo (CDN) y del peso de todo Bootstrap para usar solo la grilla.
+- Para cambiar la distribución hay que editar cada tarjeta, en vez de una sola regla en el CSS.
+
+Conclusión:
+Mi versión con CSS Grid necesitó menos código y menos clases, y se adapta a cualquier ancho. 
+Bootstrap fue útil por la rapidez de partir de una grilla ya hecha y por los puntos de quiebre estándar, pero a cambio de más marcado en el HTML y menos control fino.
