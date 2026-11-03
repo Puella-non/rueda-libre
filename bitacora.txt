@@ -209,3 +209,15 @@ Ancho:     # columnas
 
 Conclusión: la cantidad de columnas cambia según el ancho disponible,
 sin media queries, gracias a: repeat(auto-fit, minmax(250px, 1fr)).
+
+
+Flexbox o Grid: decisiones de layout
+
+Portada: Usé grid debido a que el equipo de Nodo Digital pide en el boceto que la portada contenga el texto a la izquierda y una foto a la derecha, por lo que es necesario utilizar grid para dividir ambos ítems en dos columnas.
+Galería: Usé grid debido a que el equipo pide la galería con tres rutas guiadas en una fila, por lo que se deben de distribuir en tres columnas cada contenedor de las rutas.
+Reservas: Usé grid debido a que era necesario crear dos columnas para poder pasar la sección del horario al lado derecho del formulario y poder aplicar la distribución exacta 2:1 con grid-template-columns.
+Fila del formulario: Usé Flexbox debido a que son solo dos campos en una linea. (una dimensión)
+Encabezado: Usé Flexbox debido a que era necesario acomodar el título a la izquierda y el menú a la derecha, no habían filas ni columnas que se tuvieran que alinear entre sí.
+Pie: Usé Flexbox debido a que solo debía de alinear horizontalmente tres textos cortos en una fila, es un flujo lineal, sin proporciones entre columnas.
+
+Conclusión: Grid para la estructura general de cada página y Flexbox para alinear el contenido interno de un componente.

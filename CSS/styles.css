@@ -57,7 +57,22 @@ main {
 
 /* Portada de inicio */
 .portada {
-    min-height: 40vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center; /* centra verticalmente el bloque de texto*/
+    gap: var(--espacio-l);
+    min-height: 40vh;  
+
+    .portada-texto header {
+    justify-content: flex-start;
+    gap: var(--espacio-m);
+    }
+
+    .portada-foto {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+    }
 }
 
 /*Sector agrupado de encabezados con si tipografía*/
@@ -267,5 +282,46 @@ fieldset {
     }
 }
 
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--espacio-m);
 
+    article {
+        display: flex;
+        flex-direction: column;
+        gap: var(--espacio-s);
+        padding: var(--espacio-m);
+        border: 1px solid var(--texto-secundario);
+        border-radius: 8px;
+    }
 
+    img {
+        width: 100%;
+        border-radius: 8px;
+    }
+}
+
+.reservas-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    align-items: start;
+    gap: var(--espacio-l);
+}
+
+dd {
+    margin-left: 0;
+}
+
+/* Dos campos cortos en la misma fila */
+
+.fila-campos {
+    display: flex;
+    gap: var(--espacio-m);
+    flex-wrap: wrap;
+    
+    p {
+        flex: 1 1 12rem;
+        min-width: 0;
+    }
+}
