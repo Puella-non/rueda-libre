@@ -288,3 +288,10 @@ Líneas de CSS de distribución vs. clases usadas:
 Conclusión:
 Mi versión con CSS Grid necesitó menos código y menos clases, y se adapta a cualquier ancho. 
 Bootstrap fue útil por la rapidez de partir de una grilla ya hecha y por los puntos de quiebre estándar, pero a cambio de más marcado en el HTML y menos control fino.
+
+Clases encontradas en la documentción de Bootstrap:
+1. text-decoration-none: quita el subrayado del enlace
+2. bg-warning: fondo amarillo.
+3. text-dark: texto oscuro.
+4. img-fluid: la imagen no se sale de su caja.
+5. mx-auto: se centra a sí mismo horizontalmente (con d-block).
